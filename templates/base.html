@@ -1,32 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-                    <link rel="stylesheet"
-                    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-                    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-                    crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/style.css">
-    <title>In-bastau</title>
-</head>
-<body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">In-bastau</a>
-                {% block select %}{% endblock %}
-                {% if current_user.is_authenticated %}
-                    <span>
-                        <a target="_blank" class="navbar-brand" href="/profile/{{current_user.id}}">{{ current_user.name }} {{ current_user.surname }}</a>
-                        <a class="btn btn-light" href="/logout">Выйти</a>
-                    </span>
-                {% else %}
-                    <p>
-                        <a class="btn btn-primary " href="/register">Зарегистрироваться</a>
-                        <a class="btn btn-success" href="/login">Войти</a>
-                    </p>
-                {% endif %}
-    </nav>
-    {% block content %}{% endblock %}
-</body>
-</html>
+  <title>In-bastau</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="..//static/main.css">
 
+  <!--google fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700;900&family=Poppins:wght@100;300;500;700;900&family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+
+  <!---->
+
+<body>
+<header>
+  <div class="container">
+    <div class="header__inner">
+
+      <img src="..//static/img/logo.png" class="header__logo">
+
+      <nav class="nav">
+        <a href="#about" class="nav__link">О нас</a>
+        <a href="#menu" class="nav__link">Меню</a>
+        <a href="#deliver" class="nav__link">Доставка</a>
+        <a href="#contact" class="nav__link">Контакты</a>
+      </nav>
+
+      <a href="#" class="intro__bot">Войти</a>  
+      
+    </div>
+  </div>
+</header>
+
+<div class="intro">
+  <div class="container">
+
+    <div class="intro__inner">
+      
+      <div class="intro__content">
+        <div class="intro__title">Все начинаеться с 
+        <span style="color:#F5A225 ">идеи<span>
+        <span style="color:#0F9AFF">:)</span></div>
+
+        <div class="intro__text">Возможно здесь вы найдете своих первых бизнес-ангелов</div>
+        <a href="#" class="intro__bot">Войти</a>
+      </div>   
+        
+      <img src="..//static/img/img1.png" alt="" height="380px">
+
+      
+    </div><!--intro__inner-->
+
+  </div><!--container-->
+</div><!--Intro-->
+
+
+<div class="about">
+  <div class="container">
+    <div class="bigtitle">О Нас</div>
+    <div class="about__inner">
+
+      <img src="..//static/img/about.png" alt="">
+
+      <div class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget quam ac ex malesuada hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin tincidunt, ex ac porta malesuada, metus libero imperdiet turpis, nec vehicula lacus sapien ac sem. Nunc posuere aliquet eros quis finibus.</div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="how">
+  <div class="container">
+    <div class="bigtitle">Как работает?</div>
+    <div class="how__inner">
+
+      <div class="how__item">Регистрация</div>
+      <div class="how__item">Подача своего проекта</div>
+      <div class="how__item">Проверка</div>
+      <div class="how__item">Инвестиций</div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="work">
+  <div class="container">
+    <div class="bigtitle">Проекты</div>
+    <div class="work__inner">
+      
+      <div class="work__item">
+        <img src="..//static/img/work.jpg" alt="">
+        <p>Project 1</p>
+        <p>Собрать: 10000$</p>
+      </div>
+
+      <div class="work__item">
+        <img src="..//static/img/work.jpg" alt="">
+        <p>Project 1</p>
+        <p>Собрать: 10000$</p>
+      </div>
+
+      <div class="work__item">
+        <img src="..//static/img/work.jpg" alt="">
+        <p>Project 1</p>
+        <p>Собрать: 10000$</p>
+      </div>
+
+
+      <div class="work__item">
+        <img src="..//static/img/work.jpg" alt="">
+        <p>Project 1</p>
+        <p>Собрать: 10000$</p>
+      </div>
+
+      <div class="work__item">
+        <img src="..//static/img/work.jpg" alt="">
+        <p>Project 1</p>
+        <p>Собрать: 10000$</p>
+      </div>
+
+      <div class="work__item">
+        <img src="..//static/img/work.jpg" alt="">
+        <p>Project 1</p>
+        <p>Собрать: 10000$</p>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+    
+</body>  

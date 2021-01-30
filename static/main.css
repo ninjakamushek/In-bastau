@@ -1,0 +1,189 @@
+body{
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
+    
+}
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;*/
+
+*,
+*before,
+*after{
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin:0;
+}
+
+.container{
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.bigtitle{
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/*---------------------------------*/
+/*Header*/
+.header{
+  width: 100%;
+ 
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  color: black;
+
+}
+
+.header__inner{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;/*Вот это 
+    именно делает nav по центру*/
+
+    padding: 20px 0px;
+}
+
+
+
+/*--Nav--*/
+.nav{
+ color: black;
+}
+
+.nav__link{
+  text-decoration: none;
+  font-size: 20px;
+
+  margin-left: 35px;
+  display: inline-block;
+  vertical-align: top;
+
+  transition: color 0.2s;
+}
+
+.nav__link:hover{
+  color:  #F5A225;
+}
+
+
+
+/*---------------------------------*/
+/*Intro*/
+.intro{
+/*display: flex;
+flex-direction: column;
+justify-content: center;
+*/
+width: 100%;
+height: 70vh;
+max-width: 1000px;
+margin: 0 auto;
+
+padding: 60px 0px;
+
+}
+
+.intro__inner{
+  width: 100%;
+  display: flex;
+  text-align: left;
+}
+
+.intro__title{
+  font-size: 55px;
+  margin-bottom: 40px;
+  line-height: 1.3;
+}
+
+
+.intro__text{
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.intro__bot{
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 50px;
+  border-radius: 30px;
+
+  background: #0F9AFF;
+
+  transition: 0.2s;
+
+}
+
+.intro__bot:hover{
+  background: #F5A225;
+}
+
+
+
+/*---------------------------------*/
+/*About*/
+.about{
+  margin-bottom: 70px;
+}
+
+.about__inner{
+  display: flex;
+  align-items: center;
+}
+
+.about__text{
+  width: 500px;
+
+}
+
+
+
+/*---------------------------------*/
+/*How*/
+.how{
+  margin-bottom: 100px;
+}
+
+.how__inner{
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  margin: 0 auto;
+}
+
+.how__item{
+  background: #0F9AFF;
+  padding: 5px;
+  border-radius: 20px;
+  align-items: center;
+width: 400px;
+margin: 30px auto 0;
+}
+
+
+
+
+
+/*---------------------------------*/
+/*Work*/
+.work__inner{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.work__item{
+  width: 33%;
+  margin-bottom: 60px;
+}
