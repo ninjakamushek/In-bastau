@@ -6,9 +6,11 @@ from flask_restful import abort, Api
 from werkzeug.exceptions import abort
 from werkzeug.utils import redirect
 
+from Forms.StartupCreationForm import StartupCreationForm
 from LoginForm import LoginForm
 from RegisterForm import RegisterForm
 from data import db_session
+from data.startup import Startup
 from data.users import User
 
 app = Flask(__name__)
@@ -84,6 +86,20 @@ def login():
 def logout():
     logout_user()
     return redirect("/")
+
+
+@app.route('/create_startup', methods=['GET', 'POST'])
+def create_startup():
+    form = StartupCreationForm()
+    if form.validate_on_submit():
+        session = db_session.create_session()
+        startup = Startup()
+        startup.name = form.name.data
+        startup.description = form.description.data
+        startup.author_id = current_user.id
+        session.add(startup)
+        session.commit()
+    return render_template('creating_startup.html', title='Создание стартапа', form=form)
 
 
 def run_local():

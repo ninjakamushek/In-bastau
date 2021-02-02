@@ -2,14 +2,17 @@
 <html>
 <head>
   <title>In-bastau</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="content=width=device-width, height=device-height, initial-scale=1.0">
+  <!-- css links -->
   <link rel="stylesheet" type="text/css" href="..//static/main.css">
+  <link rel="stylesheet" type="text/css" href="..//static/main_mobile.css">
 
   <!--google fonts-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700;900&family=Poppins:wght@100;300;500;700;900&family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
 
-  <!---->
+
+  <!--scripts-->
 
 <body>
 <header>
@@ -19,114 +22,37 @@
       <img src="..//static/img/logo.png" class="header__logo">
 
       <nav class="nav">
-        <a href="#about" class="nav__link">О нас</a>
-        <a href="#menu" class="nav__link">Меню</a>
-        <a href="#deliver" class="nav__link">Доставка</a>
-        <a href="#contact" class="nav__link">Контакты</a>
+
+          <a href="#about" class="nav__link">О нас</a>
+          <a href="#menu" class="nav__link">Меню</a>
+          <a href="#deliver" class="nav__link">Доставка</a>
+          <a href="#contact" class="nav__link">Контакты</a>
+          <a href="#" class="intro__bot" id="header__bot">Войти</a>
       </nav>
 
-      <a href="#" class="intro__bot">Войти</a>  
-      
+    <!-- mobile adaptation nav menu -->
+      <nav class="mobile__nav">
+        <div id="opaque__layer"></div>
+
+        <input type="checkbox" id="mobile__menu" class="toggle__menu" onclick="popupMenu()">
+        <label for="mobile__menu" class="toggle__menu"><img src="../static/svgs/menu_bar.svg" width="20%" height="20%" id="menu__bar"></label>
+          <div id="close__button">
+            <input type="checkbox" id="close__popup" class="toggle__menu" onclick="closePopupMenu()">
+            <label for="close__popup" class="toggle__menu"><img src="../static/svgs/close.svg"  width="12%" height="12%"></label>
+          </div>
+          <div class="popup__content" id="popup">
+            <ul><a href="#about" class="nav__link__mobile">О нас</a></ul>
+            <ul><a href="#menu" class="nav__link__mobile">Меню</a></ul>
+            <ul><a href="#deliver" class="nav__link__mobile">Доставка</a></ul>
+            <ul><a href="#contact" class="nav__link__mobile">Контакты</a></ul>
+            <ul><a href="#" class="intro__bot" id="mobile__bot">Войти</a> </ul>
+          </div>
+
+      </nav>
     </div>
   </div>
 </header>
 
-<div class="intro">
-  <div class="container">
-
-    <div class="intro__inner">
-      
-      <div class="intro__content">
-        <div class="intro__title">Все начинаеться с 
-        <span style="color:#F5A225 ">идеи<span>
-        <span style="color:#0F9AFF">:)</span></div>
-
-        <div class="intro__text">Возможно здесь вы найдете своих первых бизнес-ангелов</div>
-        <a href="#" class="intro__bot">Войти</a>
-      </div>   
-        
-      <img src="..//static/img/img1.png" alt="" height="380px">
-
-      
-    </div><!--intro__inner-->
-
-  </div><!--container-->
-</div><!--Intro-->
-
-
-<div class="about">
-  <div class="container">
-    <div class="bigtitle">О Нас</div>
-    <div class="about__inner">
-
-      <img src="..//static/img/about.png" alt="">
-
-      <div class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget quam ac ex malesuada hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin tincidunt, ex ac porta malesuada, metus libero imperdiet turpis, nec vehicula lacus sapien ac sem. Nunc posuere aliquet eros quis finibus.</div>
-
-    </div>
-  </div>
-</div>
-
-
-<div class="how">
-  <div class="container">
-    <div class="bigtitle">Как работает?</div>
-    <div class="how__inner">
-
-      <div class="how__item">Регистрация</div>
-      <div class="how__item">Подача своего проекта</div>
-      <div class="how__item">Проверка</div>
-      <div class="how__item">Инвестиций</div>
-      
-    </div>
-  </div>
-</div>
-
-<div class="work">
-  <div class="container">
-    <div class="bigtitle">Проекты</div>
-    <div class="work__inner">
-      
-      <div class="work__item">
-        <img src="..//static/img/work.jpg" alt="">
-        <p>Project 1</p>
-        <p>Собрать: 10000$</p>
-      </div>
-
-      <div class="work__item">
-        <img src="..//static/img/work.jpg" alt="">
-        <p>Project 1</p>
-        <p>Собрать: 10000$</p>
-      </div>
-
-      <div class="work__item">
-        <img src="..//static/img/work.jpg" alt="">
-        <p>Project 1</p>
-        <p>Собрать: 10000$</p>
-      </div>
-
-
-      <div class="work__item">
-        <img src="..//static/img/work.jpg" alt="">
-        <p>Project 1</p>
-        <p>Собрать: 10000$</p>
-      </div>
-
-      <div class="work__item">
-        <img src="..//static/img/work.jpg" alt="">
-        <p>Project 1</p>
-        <p>Собрать: 10000$</p>
-      </div>
-
-      <div class="work__item">
-        <img src="..//static/img/work.jpg" alt="">
-        <p>Project 1</p>
-        <p>Собрать: 10000$</p>
-      </div>
-
-
-    </div>
-  </div>
-</div>
-    
-</body>  
+    {% block content %}{% endblock %}
+</body>
+</html>

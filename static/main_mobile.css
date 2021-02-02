@@ -1,0 +1,129 @@
+input.toggle__menu[type="checkbox"]{
+    display: none;
+}
+
+#opaque__layer{
+    pointer-events: none;
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(200, 200, 200);
+    opacity: 0;
+}
+
+.popup__content, #close__button{
+    display: none;
+}
+
+.mobile__nav{
+    display: none;
+    overflow: hidden;
+}
+
+.intro__bot{
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 50px;
+  border-radius: 30px;
+
+  background: #0F9AFF;
+}
+
+#close__button{
+    position: absolute;
+    top: 0;
+
+}
+@media (max-width: 800px){
+    html, body{
+        overflow-x: hidden;
+    }
+    .header__logo, .intro{
+        margin-left: 5%;
+    }
+    .mobile__nav{
+        display: block;
+        overflow: visible;
+    }
+    #mobile__bot{
+        font-weight: 600;
+        padding: 10px 30px;
+        border-radius: 30px;
+    }
+    .nav{
+        display: none;
+        overflow: hidden;
+    }
+    .nav__link__mobile{
+        text-decoration: none;
+        font-size: 175%;
+        color: rgb(54, 52, 52);
+    }
+    .popup__content ul{
+        text-align: center;
+    }
+    .toggle__menu{
+        margin-left: 75%;
+    }
+    #menu__bar{
+        margin-top: 7%;
+    }
+    #intro__img{
+        z-index: -1;
+        position: absolute;
+        object-fit:scale-down;
+        margin-left: 0%;
+        opacity: 0.2;
+        width: 100%;
+    }
+    .intro__title{
+        font-size: 270%;
+    }
+    .about__inner{
+        display: block;
+    }
+    #about__img{
+        width: 95%;
+        object-fit:cover;
+        object-position: -20% 0;
+    }
+    .about__text{
+        width: 90%;
+        
+        text-align:justify;
+        margin-left: 5%;
+    }
+    .bigtitle{
+        font-size: 200%;
+    }
+    .how__item{
+        width: 90%;
+    }
+    .work__item{
+        margin-right: 20%;
+    }
+    #work__img{
+        width: 150%;
+        height: 100%;
+        margin-bottom: 5px;
+    }
+    .work__block{
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 13%;
+
+    }
+}
+
+@media (max-width: 330px){
+    .bigtitle{
+        margin-top: 20vw;
+        font-size: 200%;
+    }
+}
